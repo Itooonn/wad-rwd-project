@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(136deg, #e5e5e5, #000814);
+  color: #333;
+  line-height: 1.6;
+}
+
+.logo {
+    height: 60px;      /* Adjust as needed */
+    margin: 0;                     /* Remove default margin */
+    font-weight: bold;
+    display: block;                /* Remove flex here */
+    position: relative;
+    left: 6rem;                 /* Move right */     
+}
+
+header {
+  background-color: #000814;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px; /* Fixed height */
+  z-index: 100;
+}
+
+nav {
+    display: flex;
+    height: 100%; /* Fill header height */
+    gap: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    right: 6rem;
+    display: flex;
+    align-items: center;
+    height: 100%;            /* Fill header height */
+    padding: 0 2.4rem;       /* Only horizontal padding */
+    box-sizing: border-box;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #000814;          
+}
+
+nav a.active {
+  font-weight: 600;
+  border-bottom: 2px solid #00ff2a;
+  padding-bottom: 2px;
+}
+
+/* nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #cfcfcf;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  transform: scale(1.06);
+} */
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 40px;
+  overflow: hidden;
+  width: 86%;
+  max-width: 400px;
+  margin: 12px auto 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.search-bar button {
+  background-color: #0b2545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0 40px 40px 0;
+  margin-left: -2px;
+  transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #133e7c;
+}
+
+.school-section {
+  padding: 50px 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.school-section h2 {
+  color: #0b2545;
+  font-size: 1.6rem;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.school-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.school-card {
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.34s ease;
+}
+
+.school-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.school-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.school-info {
+  padding: 24px;
+}
+
+.school-info h3 {
+  color: #0b2545;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.location i {
+  color: #0b2545;
+}
+
+.school-info p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #5ece42;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+footer {
+  background-color: #000814;
+  color: #d6d6d6;
+  padding: 20px;
+  font-size: 0.85rem;
+  margin-top: 60px;
+}
+
+footer p {
+  background-color: #999999;
+  color: #000000;
+  padding: 20px;
+  margin: auto;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 30px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #c7c7c7;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #c2c2c2;
+}
