@@ -64,7 +64,7 @@ nav a:hover {
 }
 
 .hero {
-    background: url('images/lvcc2.png') center center/cover no-repeat;
+    background: url('images/backgrounds/lvcc2.png') center center/cover no-repeat;
     color: #fff;
     padding: 4rem 2rem;
     text-align: center;
@@ -102,7 +102,7 @@ nav a:hover {
     margin-bottom: 2rem;
 }
 
-.hero-btn {
+.button {
     background: #fff;
     color: #000814;
     padding: 0.75rem 2rem;
@@ -114,21 +114,22 @@ nav a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.hero-btn:hover {
+.button:hover {
     background: #000814;
     color: #fff;
 }
 
 
 main {
-    background-color: rgb(124, 124, 124);
+    background-color: #000814;
     margin: 10rem 0;
     height: 500px;
+    color: #fff;
 
 }
 
 main h1 {
-    padding: 2rem 0 1rem 0;
+    padding: 2.6rem 0 1rem 0;
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -145,17 +146,56 @@ main p {
     font-size: 20px;
 }
 
+/* Colleges section */
+
 article {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #8c95a3;
     margin: 10rem;
     height: 400px;
     border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure article is relative for absolute centering */
 }
 
+.content {
+    width: 100%; /* Optional: or set a max-width */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border-radius: 12px;
+    z-index: 1;
+    height: auto; /* Remove fixed height for better centering */
+    /* Remove margin/padding that might affect centering */
+}
+.colleges_section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
 
+.content h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.content ul {
+    list-style: none; 
+    padding: 0; 
+    margin-bottom: 1.5rem;
+}
+
+.content blockquote {
+    font-style: italic; 
+    color: #333; 
+    margin-bottom: 2rem;
+}
 
 /* footer */
 
@@ -168,17 +208,6 @@ footer {
     margin-top: 2rem; /* Space above footer */
 }
 
-/* Hide header by default */
-header {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-}
 
 /* Show header when you hover near the top (e.g., top 40px) */
 body:hover header,
@@ -187,8 +216,8 @@ header:hover {
     pointer-events: auto;
 }
 
-
-#myBtn {
+/* Go to the top button */
+#topBtn {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -204,6 +233,8 @@ header:hover {
   border-radius: 100px;
 }
 
-#myBtn:hover {
+#topBtn:hover {
   background-color: #0b1c3a;
 }
+
+

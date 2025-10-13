@@ -37,13 +37,13 @@ $(document).ready(function(){
 
 <body>
     
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 
     <header>
-        <img src="images/logo.png" alt="Logo" class="logo">
+        <img src="images/logos/logo.png" alt="Logo" class="logo">
         <nav class="navbar">
             <a href="#home_anchor">Home</a>
-            <a href="#section3">About</a>
+            <a href="team_porfolio.html">About</a> <!-- temporary -->
             <a href="#college_anchor">Colleges</a>
         </nav>
     </header>
@@ -57,7 +57,7 @@ $(document).ready(function(){
         <div class="hero-content" id="hero_default">
             <h1>Welcome to Visit Colleges</h1>
             <p>Discover and explore the best colleges for your future!</p>
-            <a href="#main_anchor" class="hero-btn">Get Started</a>
+            <a href="#main_anchor" class="button">Get Started</a>
         </div>
     </section>
 
@@ -88,11 +88,18 @@ $(document).ready(function(){
 
     <section id="college_anchor"></section>
 
-    <article>
-    <div style="text-align: center;">
+    <article class="colleges_section">
+    <div class="content">
         <h2>Ready to Get Started?</h2>
-        <p>Click below to explore the list of schools and find the best fit for you!</p>
-        <a href="schools.html" class="">View Schools</a>
+        <ul>
+            <li>✔ Personalized college recommendations</li>
+            <li>✔ Compare programs and locations easily</li>
+            <li>✔ Trusted by students nationwide</li>
+        </ul>
+        <blockquote>
+            "This platform made my college search so much easier!"
+        </blockquote>
+        <a href="colleges.html" class="button">View Schools &rarr;</a>
     </div>
     </article>
 
@@ -102,7 +109,7 @@ $(document).ready(function(){
 
     <script>
         // Get the button
-        let mybutton = document.getElementById("myBtn");
+        let mybutton = document.getElementById("topBtn");
 
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {scrollFunction()};
