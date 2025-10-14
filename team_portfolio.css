@@ -132,3 +132,30 @@ nav a:hover {
         align-items: flex-start;
       }
             }
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* allow it to grow naturally */
+        padding: 10px 0;
+    }
+
+    .logo {
+        position: static; /* reset left positioning */
+        margin-bottom: 10px; /* space below logo */
+        height: 55px;
+    }
+
+    nav {
+        flex-direction: row; /* navigation in a row */
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav a {
+        right: 0; /* reset position */
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+                                }
