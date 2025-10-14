@@ -156,3 +156,39 @@ nav a:hover {
         align-items: flex-start;
     }
 }
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;     /* stack logo above nav */
+        align-items: center;        /* center both horizontally */
+        height: auto;               /* let it grow naturally */
+        padding: 10px 0;
+    }
+
+    .logo {
+        position: static;           /* reset position from 'left' */
+        margin-bottom: 10px;        /* space below logo */
+        height: 55px;
+    }
+
+    nav {
+        flex-direction: row;        /* keep links in a row */
+        justify-content: center;    /* center the row */
+        width: 100%;
+    }
+
+    nav a {
+        right: 0;                   /* reset manual positioning */
+        padding: 10px 15px;         /* smaller spacing */
+        font-size: 0.95em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* one card per row */
+        padding: 10px;
+    }
+
+    .card {
+        padding: 20px;              /* reduce padding for smaller screen */
+    }
+    }
