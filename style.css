@@ -180,8 +180,8 @@ main p {
     z-index: 0;
 }
 
-.content h2 {
-    font-size: 3rem;
+.content h1 {
+    font-size: 4rem;
     margin-bottom: 1.5rem;
 }
 
@@ -235,6 +235,25 @@ header:hover {
 
 #topBtn:hover {
   background-color: #0b1c3a;
+}
+
+.something {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 10rem 0;
+}
+
+.design {
+    background-color: #000814;
+    color: #fff;
+    width: 100%;
+    padding: 6rem;
+}
+
+.quotes {
+
 }
 
 /* ====== TABLET VIEW ====== */
