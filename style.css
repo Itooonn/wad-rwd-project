@@ -123,13 +123,14 @@ nav a:hover {
 main {
     background-color: #000814;
     margin: 10rem 0;
-    height: 500px;
+    height: auto;
     color: #fff;
+    padding: 2rem;
 
 }
 
 main h1 {
-    padding: 2.6rem 0 1rem 0;
+    padding: 0 0 1rem 0;
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -141,8 +142,7 @@ main p {
     line-height: 1.6;
     max-width: 800px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     font-size: 20px;
 }
 
@@ -275,7 +275,7 @@ header:hover {
     }
 
     main h1 {
-        padding: 0%;
+    padding: 0 0 1rem 0;
     }
 }
 
