@@ -148,7 +148,7 @@ main p {
 
 /* Colleges section */
 
-article {
+.colleges_section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,8 +242,9 @@ header:hover {
     header {
         flex-direction: column;          /* Stack logo and nav vertically */
         height: auto;                    /* Allow header height to grow */
-        padding: 1rem 0;
+        /* padding: 0; */
         text-align: center;
+        opacity: 100%;
     }
 
     .logo {
@@ -263,17 +264,23 @@ header:hover {
         width: 100%;                     /* Full width for each link */
         justify-content: space-evenly;
         padding: 1rem 0;
+        margin: auto;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    nav a:hover {
-        background-color: #ffffff;
-        color: #000814;
+    main {
+        height: auto;     /* Let content determine height */
+        padding: 2rem;    /* Optional: add padding for inner spacing */
+    }
+
+    main h1 {
+        padding: 0%;
     }
 }
 
 /* ====== MOBILE VIEW (480px and below) ====== */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .hero h1 {
         font-size: 1.8rem;               /* Slightly smaller heading */
     }
@@ -287,10 +294,13 @@ header:hover {
         padding: 0.6rem 1.5rem;
     }
 
-    main, article {
-        margin: 12px;
-        height: auto;                    /* Let content expand naturally */
-        flex-direction: column;
-        text-align: center;
+    main {
+        height: auto;
+        padding: 2rem;
+    }
+
+    main h1 {
+        padding: 0%;
     }
 }
+/* THIS DOESNT WORK */
