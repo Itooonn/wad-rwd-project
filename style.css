@@ -251,8 +251,9 @@ header:hover {
     text-align: center;
     width: 100%;              /* control box width */
     padding: 2rem;
+    height: 100%;            
+    margin: auto;
     background-color: #000814; /* optional background for each box */
-    /* border-radius: 12px; */
     color: #fff;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -382,6 +383,24 @@ blockquote p {
 
     main h1 {
     padding: 0 0 1rem 0;
+    }
+
+    main h1, 
+    main p {
+        font-size: small;               /* Slightly smaller text */
+    }
+
+    .features {
+        flex-direction: column;  /* Stack features vertically */
+        margin: 5rem 0;          /* Adjust margin for vertical layout */
+    }
+
+    .colleges_section {
+        margin: auto;
+    }
+    
+    .content h1 {
+        font-size: 2.5rem;            
     }
 }
 
