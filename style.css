@@ -261,7 +261,7 @@ header:hover {
     align-items: center;       /* center icon and text */
     text-align: center;
     width: 100%;              /* control box width */
-    padding: 2rem;
+    padding: 4rem;
     height: 100%;            
     margin: auto;
     background-color: #000814; /* optional background for each box */
@@ -360,7 +360,6 @@ blockquote p {
     header {
         flex-direction: column;          /* Stack logo and nav vertically */
         height: auto;                    /* Allow header height to grow */
-        /* padding: 0; */
         text-align: center;
         opacity: 100%;
     }
