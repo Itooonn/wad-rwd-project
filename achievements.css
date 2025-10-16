@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #797979;
+    background: #fff;
     margin: 0;
     padding: 0;
     color: #2c3e50;
@@ -82,7 +82,7 @@ nav a:hover {
     padding: 10px;
 }
 .card {
-    background: #fff;
+    background: #e2e2e2;
     box-shadow: 0 8px 12px rgba(0,0,0,0.04);
     border-radius: 15px;
     padding: 30px 24px 24px 24px;
