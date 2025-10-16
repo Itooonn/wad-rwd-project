@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #d3d3d3;
+    background: #f1f1f1f1;
     color: #333;
 }
 
@@ -241,7 +241,7 @@ header:hover {
     display: flex;
     justify-content: center;   /* center all three horizontally */
     align-items: flex-start;   /* align them from the top */
-    margin: 5rem 0;
+    margin: 10rem 0;
 }
 
 .feature {
@@ -276,7 +276,6 @@ header:hover {
 
 /* Slides */
 .mySlides {
-  display: none;
   padding: 80px;
   text-align: center;
 }
@@ -289,7 +288,7 @@ header:hover {
   width: auto;
   margin-top: -30px;
   padding: 16px;
-  color: #888;
+  color: #000814;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -305,7 +304,7 @@ header:hover {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: #000814;
   color: white;
 }
 
@@ -313,7 +312,6 @@ header:hover {
 .dot-container {
     text-align: center;
     padding: 20px;
-    background: #ddd;
 }
 
 /* The dots/bullets/indicators */
@@ -334,10 +332,14 @@ header:hover {
 }
 
 /* Add an italic font style to all quotes */
-q {font-style: italic;}
+blockquote p {
+    font-size: 30px;
+    font-style: italic;
+    margin: 2rem;
+}
 
 /* Add a blue color to the author */
-.author {color: cornflowerblue;}
+.author {color: rgb(102, 102, 102);}
 
 
 
