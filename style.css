@@ -348,12 +348,11 @@ blockquote p {
 
 
 /* ====== TABLET VIEW ====== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     header {
         flex-direction: column;          /* Stack logo and nav vertically */
         height: auto;                    /* Allow header height to grow */
         text-align: center;
-        opacity: 100%;
     }
 
     .logo {
@@ -412,7 +411,7 @@ blockquote p {
 }
 
 /* ====== MOBILE VIEW (480px and below) ====== */
-/* @media screen and (max-width: 768px) {
+/* @media screen and (max-width: 480px) {
     .hero h1 {
         font-size: 1.8rem;            
     }

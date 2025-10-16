@@ -155,28 +155,32 @@ nav a:hover {
 
 @media (max-width: 600px) {
     header {
-        flex-direction: column;     /* stack logo above nav */
-        align-items: center;        /* center both horizontally */
-        height: auto;               /* let it grow naturally */
-        padding: 10px 0;
+        flex-direction: column;          /* Stack logo and nav vertically */
+        height: auto;                    /* Allow header height to grow */
+        text-align: center;
+        opacity: 100%;
     }
 
     .logo {
-        position: static;           /* reset position from 'left' */
-        margin-bottom: 10px;        /* space below logo */
-        height: 55px;
+        position: static;                /* Reset position */
+        left: 0;
+        margin-bottom: 0.5rem;
+        height: 50px;
     }
 
     nav {
-        flex-direction: row;        /* keep links in a row */
-        justify-content: center;    /* center the row */
         width: 100%;
+        background-color: #000814;       /* Match header color */
     }
 
     nav a {
-        right: 0;                   /* reset manual positioning */
-        padding: 10px 15px;         /* smaller spacing */
-        font-size: 0.95em;
+        right: 0;                        /* Reset the right offset */
+        width: 100%;                     /* Full width for each link */
+        justify-content: space-evenly;
+        padding: 1rem 0;
+        margin: auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .grid-container {
