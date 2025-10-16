@@ -102,10 +102,6 @@ nav a.active {
   transition: all 0.3s ease;
 }
 
-.search-bar button:hover {
-  background-color: #133e7c;
-}
-
 .school-section {
   padding: 50px 30px;
   max-width: 1000px;
