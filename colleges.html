@@ -145,127 +145,167 @@
 
   <script>
     (function() {
-      const schoolLinks = {
-        "ACLC College": {
-          mapLink: "https://maps.app.goo.gl/dGRbPgCWZKkdTCTCA",
-          applyLink: "https://marthaschool.edu/apply"
-        },
-        "ATEC Technological College": {
-          mapLink: "https://maps.app.goo.gl/KV5g5a1thPA2XhLx9", 
-          applyLink: "https://atectechcollege.wixsite.com/ateceducation?"
-        },
-        "DHVSU Apalit Campus": {
-          mapLink: "https://maps.app.goo.gl/BGhk1KxXAHm2axAt6",
-          applyLink: "https://dhvsu.edu.ph/academics/dhvsu-campuses/apalit-campus?"
-        },
-        "DHVSU Santo Tomas Campus": {
-          mapLink: "https://maps.app.goo.gl/gZnBbKMyic2x6BQp9",
-          applyLink: "https://dhvsu.edu.ph/academics/dhvsu-campuses/santo-tomas-campus?"
-        },
-        "Gonzalez Memorial College": {
-          mapLink: "https://maps.app.goo.gl/kRLdd9eo3W6VC5BZ9",
-          applyLink: "https://stjosephcollege.edu/admissions"
-        },
-        "Laverdad Christian College": {
-          mapLink: "https://maps.app.goo.gl/vfDLTu2adpZAM1sR9",
-          applyLink: "https://laverdad.edu.ph/"
-        },
-        "Our Lady of Fatima University, Pampanga Campus": {
-          mapLink: "https://maps.app.goo.gl/9SAZryDpVcPq28yX6",
-          applyLink: "https://fatima.edu.ph/pampanga-campus-college-of-nursing-boosts-community-health-nursing-course-via-alliance-with-city-government-of-san-fernando/"
-        },
-        "Pampanga College": {
-          mapLink: "https://maps.app.goo.gl/Hf8o6uZnz9BQvtFh6",
-          applyLink: "https://stjosephcollege.edu/admissions"
-        },
-        "Pampanga Central College Inc.": {
-          mapLink: "https://maps.app.goo.gl/xojz5CwcnVQ42PRn7",
-          applyLink: "https://www.facebook.com/pccisansimon1947/"
-        },
-        "University of the Assumption": {
-          mapLink: "https://maps.app.goo.gl/1NjykmCoREi4iSxs5",
-          applyLink: "https://admissions.ua.edu.ph/college/"
-        }
-      };
+  
+  const schoolLinks = {
+    "ACLC College": {
+      mapLink: "https://maps.app.goo.gl/dGRbPgCWZKkdTCTCA",
+      applyLink: "https://marthaschool.edu/apply"
+    },
+    "ATEC Technological College": {
+      mapLink: "https://maps.app.goo.gl/KV5g5a1thPA2XhLx9", 
+      applyLink: "https://atectechcollege.wixsite.com/ateceducation?"
+    },
+    "DHVSU Apalit Campus": {
+      mapLink: "https://maps.app.goo.gl/BGhk1KxXAHm2axAt6",
+      applyLink: "https://dhvsu.edu.ph/academics/dhvsu-campuses/apalit-campus?"
+    },
+    "DHVSU Santo Tomas Campus": {
+      mapLink: "https://maps.app.goo.gl/gZnBbKMyic2x6BQp9",
+      applyLink: "https://dhvsu.edu.ph/academics/dhvsu-campuses/santo-tomas-campus?"
+    },
+    "Gonzalez Memorial College": {
+      mapLink: "https://maps.app.goo.gl/kRLdd9eo3W6VC5BZ9",
+      applyLink: "https://stjosephcollege.edu/admissions"
+    },
+    "Laverdad Christian College": {
+      mapLink: "https://maps.app.goo.gl/vfDLTu2adpZAM1sR9",
+      applyLink: "https://stjosephcollege.edu/admissions"
+    },
+    "Our Lady of Fatima University, Pampanga Campus": {
+      mapLink: "https://maps.app.goo.gl/9SAZryDpVcPq28yX6",
+      applyLink: "https://fatima.edu.ph/pampanga-campus-college-of-nursing-boosts-community-health-nursing-course-via-alliance-with-city-government-of-san-fernando/"
+    },
+    "Pampanga College": {
+      mapLink: "https://maps.app.goo.gl/Hf8o6uZnz9BQvtFh6",
+      applyLink: "https://stjosephcollege.edu/admissions"
+    },
+    "Pampanga Central College Inc.": {
+      mapLink: "https://maps.app.goo.gl/xojz5CwcnVQ42PRn7",
+      applyLink: "https://www.facebook.com/pccisansimon1947/"
+    },
+    "University of the Assumption": {
+      mapLink: "https://maps.app.goo.gl/1NjykmCoREi4iSxs5",
+      applyLink: "https://admissions.ua.edu.ph/college/"
+    }
+  };
 
-      function createOverlay() {
-        const overlay = document.createElement('div');
-        overlay.className = 'card-overlay';
-        return overlay;
-      }
+  function setupSearch() {
+    const searchInput = document.querySelector('.search-bar input');
+    const searchButton = document.querySelector('.search-bar button');
+    const schoolCards = document.querySelectorAll('.school-card');
 
-      function createModalFromCard(card) {
-        const cardCopy = card.cloneNode(true);
-        cardCopy.style.transform = 'none';
-        cardCopy.style.margin = '0';
-        cardCopy.classList.add('card-modal');
-
-        const schoolName = card.querySelector('h3').textContent;
-        const linksSection = document.createElement('div');
-        linksSection.className = 'modal-links';
+    function filterSchools() {
+      const searchTerm = searchInput.value.trim().toLowerCase();
+      
+      schoolCards.forEach(card => {
+        const schoolName = card.querySelector('h3').textContent.toLowerCase();
         
-        const mapLink = document.createElement('a');
-        mapLink.href = schoolLinks[schoolName] ? schoolLinks[schoolName].mapLink : '#';
-        mapLink.target = '_blank';
-        mapLink.textContent = 'View on Map';
-        
-        const applyLink = document.createElement('a');
-        applyLink.href = schoolLinks[schoolName] ? schoolLinks[schoolName].applyLink : '#';
-        applyLink.className = 'extra-link';
-        applyLink.textContent = 'Apply now';
-        
-        linksSection.appendChild(mapLink);
-        linksSection.appendChild(applyLink);
-        cardCopy.appendChild(linksSection);
-
-        const closeButton = document.createElement('button');
-        closeButton.className = 'card-close';
-        closeButton.innerText = 'Close';
-        closeButton.type = 'button';
-
-        const wrapper = document.createElement('div');
-        wrapper.style.position = 'relative';
-        wrapper.appendChild(closeButton);
-        wrapper.appendChild(cardCopy);
-
-        return { wrapper, closeButton };
-      }
-
-      function openCardModal(card) {
-        const overlay = createOverlay();
-        const modal = createModalFromCard(card);
-        
-        overlay.appendChild(modal.wrapper);
-        document.body.appendChild(overlay);
-        document.documentElement.style.overflow = 'hidden';
-
-        function closeModal() {
-          if (overlay.parentNode) {
-            overlay.parentNode.removeChild(overlay);
-            document.documentElement.style.overflow = '';
-            document.removeEventListener('keydown', handleKeyPress);
+        if (searchTerm === '') {
+          card.style.display = 'block';
+        } else {
+          if (schoolName.startsWith(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
           }
         }
-
-        function handleKeyPress(event) {
-          if (event.key === 'Escape') closeModal();
-        }
-
-        overlay.addEventListener('click', function(event) {
-          if (event.target === overlay) closeModal();
-        });
-
-        modal.closeButton.addEventListener('click', closeModal);
-        document.addEventListener('keydown', handleKeyPress);
-      }
-
-      document.addEventListener('click', function(event) {
-        const card = event.target.closest('.school-card');
-        if (!card) return;
-        if (event.target.closest('a') || event.target.closest('button')) return;
-        openCardModal(card);
       });
-    })();
+    }
+
+    searchInput.addEventListener('input', filterSchools);
+    searchButton.addEventListener('click', filterSchools);
+    
+    searchInput.addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        filterSchools();
+      }
+    });
+  }
+
+  function createOverlay() {
+    const overlay = document.createElement('div');
+    overlay.className = 'card-overlay';
+    return overlay;
+  }
+
+  function createModalFromCard(card) {
+    const cardCopy = card.cloneNode(true);
+    cardCopy.style.transform = 'none';
+    cardCopy.style.margin = '0';
+    cardCopy.classList.add('card-modal');
+
+    const schoolName = card.querySelector('h3').textContent;
+    const linksSection = document.createElement('div');
+    linksSection.className = 'modal-links';
+    
+    const mapLink = document.createElement('a');
+    mapLink.href = schoolLinks[schoolName] ? schoolLinks[schoolName].mapLink : '#';
+    mapLink.target = '_blank';
+    mapLink.textContent = 'View on Map';
+    
+    const applyLink = document.createElement('a');
+    applyLink.href = schoolLinks[schoolName] ? schoolLinks[schoolName].applyLink : '#';
+    applyLink.className = 'extra-link';
+    applyLink.textContent = 'Apply now';
+    
+    linksSection.appendChild(mapLink);
+    linksSection.appendChild(applyLink);
+    cardCopy.appendChild(linksSection);
+
+    const closeButton = document.createElement('button');
+    closeButton.className = 'card-close';
+    closeButton.innerText = 'Close';
+    closeButton.type = 'button';
+
+    const wrapper = document.createElement('div');
+    wrapper.style.position = 'relative';
+    wrapper.appendChild(closeButton);
+    wrapper.appendChild(cardCopy);
+
+    return { wrapper, closeButton };
+  }
+
+  function openCardModal(card) {
+    const overlay = createOverlay();
+    const modal = createModalFromCard(card);
+    
+    overlay.appendChild(modal.wrapper);
+    document.body.appendChild(overlay);
+    document.documentElement.style.overflow = 'hidden';
+
+    function closeModal() {
+      if (overlay.parentNode) {
+        overlay.parentNode.removeChild(overlay);
+        document.documentElement.style.overflow = '';
+        document.removeEventListener('keydown', handleKeyPress);
+      }
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Escape') closeModal();
+    }
+
+    overlay.addEventListener('click', function(event) {
+      if (event.target === overlay) closeModal();
+    });
+
+    modal.closeButton.addEventListener('click', closeModal);
+    document.addEventListener('keydown', handleKeyPress);
+  }
+
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    setupSearch();
+    
+  
+    document.addEventListener('click', function(event) {
+      const card = event.target.closest('.school-card');
+      if (!card) return;
+      if (event.target.closest('a') || event.target.closest('button')) return;
+      openCardModal(card);
+    });
+  });
+})();
   </script>
 </body>
 </html>
