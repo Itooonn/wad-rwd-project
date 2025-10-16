@@ -291,14 +291,18 @@
   }
 
   
-  document.addEventListener('DOMContentLoaded', function() {
-    setupSearch();
+    document.addEventListener('DOMContentLoaded', function() {
+      setupSearch();
     
   
     document.addEventListener('click', function(event) {
       const card = event.target.closest('.school-card');
       if (!card) return;
       if (event.target.closest('a') || event.target.closest('button')) return;
+
+      // ✅ Prevent multiple modals from opening
+      if (document.querySelector('.card-overlay')) return;
+
       openCardModal(card);
     });
   });
