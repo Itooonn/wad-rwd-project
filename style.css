@@ -393,9 +393,9 @@ blockquote p {
 
     main h1 {
     padding: 0 0 1rem 0;
+    font-size: 25px;
     }
 
-    main h1, 
     main p {
         font-size: small;               /* Slightly smaller text */
     }
