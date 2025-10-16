@@ -62,7 +62,7 @@ nav a:hover {
 }
 
 .hero {
-    background: url('images/backgrounds/lvcc2.png') center center/cover no-repeat;
+    background: url('images/backgrounds/lvcc2.webp') center center/cover no-repeat;
     color: #fff;
     padding: 4rem 2rem;
     text-align: center;
@@ -148,7 +148,7 @@ main p {
 
 .colleges_section {
   position: relative;
-  background: url('images/backgrounds/lvcc2.png') center/cover no-repeat; /* reuse your hero bg or use another campus image */
+  background: url('images/backgrounds/lvcc2.webp') center/cover no-repeat; /* reuse your hero bg or use another campus image */
   min-height: 400px;
   display: flex;
   justify-content: center;
