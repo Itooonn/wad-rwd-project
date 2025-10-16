@@ -1,12 +1,21 @@
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f7f9fc;
-    margin: 0;
-    padding: 0;
-    color: #2c3e50;
-    background: linear-gradient(to bottom, #E5E5E5 0%, #000814 100%);
+/* ==========================
+   GLOBAL STYLES
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
+body {
+  background: #f1f1f1; 
+  color: #333;
+}
+
+/* ==========================
+   HEADER & NAVIGATION
+========================== */
 .logo {
     height: 60px;      /* Adjust as needed */
     margin: 0;                     /* Remove default margin */
@@ -17,18 +26,18 @@ body {
 }
 
 header {
-  background-color: #000814;
-  color: white;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
-  position: sticky;
-  top: 0;
-  width: 100%;
-  height: 80px; /* Fixed height */
-  z-index: 100;
+    background-color: #000814;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 80px;
+    pointer-events: auto;
+    transition: opacity 0.3s;
 }
 
 nav {
@@ -57,105 +66,244 @@ nav a:hover {
     color: #000814;          
 }
 
-
-
+/* ==========================
+   TITLES
+========================== */
 .title {
-    text-align: center;
-    margin: 30px 0 10px 0;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #000814;
+  text-align: center;
+  margin: 30px 0 10px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #000814;
 }
-.team-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: 25px auto;
 
+/* ==========================
+   HERO SECTION
+========================== */
+.about-hero {
+  background: url('images/backgrounds/lvcc2.webp') center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  position: relative;
 }
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 8, 20, 0.7);
+  z-index: 0;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-content h1 {
+  font-size: 3rem;
+  margin: 4rem 0;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: #dce0e6;
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+.about-main {
+    padding: 2rem 0;
+}
+.about-main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-main p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.about-first-section{
+    background-color: #f1f1f1;
+    color: #000814;
+    padding: 2rem;
+    text-align: center;
+}
+
+.about-second-section {
+    background-color: #000814;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.about-third-section{
+    background-color: #f1f1f1;
+    color: #000814;
+    padding: 2rem;
+    text-align: center;
+}
+
+.about-list {
+    list-style: none;
+}
+
+.about-list li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.about-list i {
+  color: #002152;
+  margin-right: 10px;
+}
+
+/* ==========================
+   TEAM SECTION
+========================== */
+.team_title h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000814;
+  padding: 0%;
+  margin: 0%;
+}
+
+.team-container {
+  background-color: #000814; /* full-width background */
+  width: 100%;
+  padding: 3rem 0; /* space around cards */
+}
+
+.team-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;   /* controls card width area */
+  margin: auto;     /* centers the grid */
+  padding: 1rem;
+}
+
 .member-card {
-    background: #fff;
-    box-shadow: 0 8px 12px rgba(0,0,0,0.04);
-    border-radius: 15px;
-    padding: 32px 22px 26px 22px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: #fff;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 15px;
+  padding: 32px 22px 26px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
 }
+
 .member-photo {
-    width: 96px;
-    height: 96px;
-    object-fit: cover;
-    border-radius: 50%;
-    background: #eee;
-    margin-bottom: 15px;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #eee;
+  margin-bottom: 15px;
 }
+
 .member-name {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #3488d1;
-    margin-bottom: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #3488d1;
+  margin-bottom: 5px;
 }
+
 .member-role {
-    font-size: 0.97em;
-    color: #1877b2;
-    margin-bottom: 12px;
-    font-weight: 500;
+  font-size: 0.97em;
+  color: #1877b2;
+  margin-bottom: 12px;
+  font-weight: 500;
 }
+
 .member-bio {
-    font-size: 0.98em;
-    color: #444;
-    margin-bottom: 8px;
-    text-align: center;
+  font-size: 0.98em;
+  color: #444;
+  margin-bottom: 8px;
+  text-align: center;
 }
+
 .skills {
-    margin-top: 10px;
-    margin-bottom: 7px;
-    text-align: center;
+  margin-top: 10px;
+  text-align: center;
 }
+
 .skills span {
-    display: inline-block;
-    background: #eaf4fb;
-    color: #1082cd;
-    border-radius: 13px;
-    padding: 4px 12px;
-    margin: 2px 5px;
-    font-size: 0.9em;
+  display: inline-block;
+  background: #eaf4fb;
+  color: #1082cd;
+  border-radius: 13px;
+  padding: 4px 12px;
+  margin: 2px 5px;
+  font-size: 0.9em;
 }
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+  background-color: #000814;
+  color: white;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
 @media (max-width: 900px) {
-    .team-container {
-        grid-template-columns: 1fr;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-            }
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        height: auto; /* allow it to grow naturally */
-        padding: 10px 0;
-    }
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px 0;
+  }
 
-    .logo {
-        position: static; /* reset left positioning */
-        margin-bottom: 10px; /* space below logo */
-        height: 55px;
-    }
+  .logo {
+    position: static;
+    margin-bottom: 10px;
+    height: 55px;
+  }
 
-    nav {
-        flex-direction: row; /* navigation in a row */
-        justify-content: center;
-        width: 100%;
-    }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
 
-    nav a {
-        right: 0; /* reset position */
-        padding: 10px 15px;
-        font-size: 0.95em;
-    }
-                                }
+  nav a {
+    padding: 10px 15px;
+    font-size: 0.95em;
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
+  }
+}
