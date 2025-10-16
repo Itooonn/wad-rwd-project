@@ -11,15 +11,6 @@ body {
   line-height: 1.6;
 }
 
-.logo {
-    height: 60px;      /* Adjust as needed */
-    margin: 0;                     /* Remove default margin */
-    font-weight: bold;
-    display: block;                /* Remove flex here */
-    position: relative;
-    left: 6rem;                 /* Move right */     
-}
-
 header {
   background-color: #000814;
   color: white;
@@ -31,34 +22,43 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  height: 80px; /* Fixed height */
+  height: 80px;
   z-index: 100;
 }
 
+.logo {
+  height: 60px;
+  margin: 0;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  left: 6rem;
+}
+
 nav {
-    display: flex;
-    height: 100%; /* Fill header height */
-    gap: 0;
-    margin-top: 0;
-    padding: 0;
+  display: flex;
+  height: 100%;
+  gap: 0;
+  margin-top: 0;
+  padding: 0;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    right: 6rem;
-    display: flex;
-    align-items: center;
-    height: 100%;            /* Fill header height */
-    padding: 0 2.4rem;       /* Only horizontal padding */
-    box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  right: 6rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2.4rem;
+  box-sizing: border-box;
 }
 
 nav a:hover {
-    background-color: #ffffff;
-    color: #000814;          
+  background-color: #ffffff;
+  color: #000814;
 }
 
 nav a.active {
@@ -125,13 +125,13 @@ nav a.active {
   gap: 34px;
 }
 
-  .school-card {
-    background-color: white;
-    border-radius: 14px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.34s ease;
-  }
+.school-card {
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.34s ease;
+}
 
 .school-card:hover {
   transform: scale(1.02);
@@ -140,7 +140,7 @@ nav a.active {
 
 .school-image {
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
   display: block;
 }
@@ -216,35 +216,105 @@ footer ul li a:hover {
   color: #c2c2c2;
 }
 
+@keyframes modalIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.card-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0,0,0,0.6);
+  z-index: 1200;
+  animation: modalIn 0.18s ease;
+}
+
+.card-modal {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  background: #fff;
+  animation: modalIn 0.18s ease;
+}
+
+.card-modal .school-image {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+}
+
+.card-modal .school-info {
+  padding: 20px;
+}
+
+.card-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #0b2545;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1250;
+}
+
+.modal-links {
+  padding: 10px 15px;
+  border-top: 1px solid #beccc5;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000814;
+}
+
+.modal-links a {
+  color: #d6e2e4;
+  text-decoration: none;
+  font-size: 16px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.26);
+}
+
+.modal-links a:hover {
+  color: #0be94d;
+}
+
 @media (max-width: 600px) {
-  /* HEADER - logo on top, nav below */
   header {
-    flex-direction: column;       /* stack logo above nav */
-    align-items: center;          /* center content */
-    height: auto;                 /* allow flexible height */
+    flex-direction: column;
+    align-items: center;
+    height: auto;
     padding: 10px 0;
   }
 
   .logo {
-    position: static;             /* reset manual positioning */
-    margin-bottom: 10px;          /* space below logo */
+    position: static;
+    margin-bottom: 10px;
     height: 55px;
     left: 0;
   }
 
   nav {
-    flex-direction: row;          /* keep links in a row */
-    justify-content: center;      /* center navigation */
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
   }
 
   nav a {
-    right: 0;                     /* reset manual right offset */
-    padding: 10px 15px;           /* adjust padding */
-    font-size: 0.9em;             /* slightly smaller text */
+    right: 0;
+    padding: 10px 15px;
+    font-size: 0.9em;
   }
 
-  /* SEARCH BAR - full width and vertical spacing */
   .search-bar {
     flex-direction: column;
     width: 90%;
@@ -267,7 +337,6 @@ footer ul li a:hover {
     padding: 10px;
   }
 
-  /* SCHOOL SECTION */
   .school-section {
     padding: 30px 15px;
   }
@@ -277,7 +346,7 @@ footer ul li a:hover {
   }
 
   .school-image {
-    height: 160px;  /* reduce image height */
+    height: 160px;
   }
 
   .school-info {
@@ -296,10 +365,9 @@ footer ul li a:hover {
     font-size: 0.85rem;
   }
 
-  /* FOOTER */
   footer {
     font-size: 0.8rem;
     text-align: center;
     padding: 15px;
   }
-    }
+}
