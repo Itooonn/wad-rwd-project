@@ -17,7 +17,7 @@
     <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
 
     <header>
-        <img src="images/logos/logo.png" alt="Logo" class="logo">
+        <a href="#home_anchor"><img src="images/logos/logo.png" alt="Logo" class="logo"></a>
         <nav class="navbar">
             <a href="#home_anchor">Home</a>
             <a href="team_porfolio.html">About</a> 
@@ -130,12 +130,40 @@
     </div>
     </section>
 
-    <footer id="section3">
+    <footer class="footer-top">
+        <div class="footer-container">
+            <div class="row">
+                <div class="first-row">
+                    <div class="footer_logo">
+                        <a href="#home_anchor">
+                            <img src="images/logos/logo.png" alt="Logo">
+                        </a>
+                    </div>
+                    <p>
+                    McArthur Highway 
+                    <br>
+                    Apalit
+                    <br>
+                    <a href="">09 xxx xxx xxx</a>
+                    <a href="#">visit.colleges@gmail.com</a>
+                    </p>
+                    <div class="social-links">
+                        <ul>
+                        <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer-bottom">
         <p>&copy; 2024 Visit Colleges. All rights reserved.</p>
     </footer>
 </body>
 
-    <script>
+<script>
         // Get the button
         let mybutton = document.getElementById("topBtn");
 
@@ -155,6 +183,6 @@
         function topFunction() {
             $('html, body').animate({ scrollTop: 0 }, 600);
         }
-    </script>
+</script>
 
 </html>
