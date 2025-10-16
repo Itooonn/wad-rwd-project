@@ -178,14 +178,14 @@ nav a:hover {
   font-size: 2rem;
   color: #fff;
   background-color: #000814;
-  padding: 0%;
+  padding: 2rem 0;
   margin: 0%;
 }
 
 .team-container {
   background-color: #000814; /* full-width background */
   width: 100%;
-  padding: 3rem 0; /* space around cards */
+  padding-bottom: 4rem;
 }
 
 .team-wrapper {
@@ -194,7 +194,6 @@ nav a:hover {
   gap: 30px;
   max-width: 900px;   /* controls card width area */
   margin: auto;     /* centers the grid */
-  padding: 1rem;
 }
 
 .member-card {

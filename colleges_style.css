@@ -71,6 +71,7 @@ nav a.active {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
+  padding-top: 50p;
   border-radius: 40px;
   overflow: hidden;
   width: 86%;

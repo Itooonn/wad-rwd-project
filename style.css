@@ -219,14 +219,6 @@ footer {
     margin-top: 2rem; /* Space above footer */
 }
 
-
-/* Show header when you hover near the top (e.g., top 40px) */
-body:hover header,
-header:hover {
-    opacity: 1;
-    pointer-events: auto;
-}
-
 /* Go to the top button */
 #topBtn {
   display: none;

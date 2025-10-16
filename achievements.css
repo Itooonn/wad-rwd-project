@@ -1,18 +1,14 @@
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f1f1f1f1;
-    margin: 0;
-    padding: 0;
-    color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
-/* .bg-image {
-    background: url('');
-    display: block;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-} */
+
+body {
+  background: #f1f1f1; 
+  color: #333;
+}
 
 .logo {
     height: 60px;      /* Adjust as needed */
