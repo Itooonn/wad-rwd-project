@@ -5,35 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit Colleges</title> 
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
+<script src="script.js"></script>
 
 <body>
     
@@ -84,28 +60,54 @@ $(document).ready(function(){
     </main>
 
 <!-- Section for what can students get from our site -->
-    <article class="something">
-            <p class="design">✔ Personalized college recommendations</p>
-            <p class="design">✔ Compare programs and locations easily</p>
-            <p class="design">✔ Trusted by students nationwide</p>
-    </article>
+        <section class="features">
+        <article class="feature">
+            <i class="fas fa-graduation-cap"></i>
+            <p class="design">Personalized college recommendations</p>
+        </article>
+
+        <article class="feature">
+            <i class="fas fa-university"></i>
+            <p class="design">Compare programs and locations easily</p>
+        </article>
+
+        <article class="feature">
+            <i class="fas fa-users"></i>
+            <p class="design">Trusted by students nationwide</p>
+        </article>
+        </section>
+
 
 <!-- Blockquotes -->
-    <article class="quotes">
+    <section class="slideshow-container">
+    <blockquote class="mySlides">
+            “This made my seach for college easier!”
+            <cite class="author">– Oprah Winfrey</cite>
+    </blockquote>
 
-        <blockquote>
-            "This platform made my college search so much easier!"
-        </blockquote>
+    <blockquote class="mySlides">
+            “The beautiful thing about learning is that no one can take it away from you.”
+            <cite class="author">– B.B. King</cite>
+    </blockquote>
 
-        <blockquote>
-            "This platform made my college search so much easier!"
-        </blockquote>
+    <blockquote class="mySlides">
+            “An investment in knowledge pays the best interest.”
+            <cite class="author">– Benjamin Franklin</cite>
+    </blockquote>
 
-        <blockquote>
-            "This platform made my college search so much easier!"
-        </blockquote>
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
 
-    </article>
+    </section>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <script src="script.js"></script>
+
 
 
 <!-- Anchor for collges section -->

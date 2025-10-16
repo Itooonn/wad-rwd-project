@@ -237,24 +237,109 @@ header:hover {
   background-color: #0b1c3a;
 }
 
-.something {
+.features {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 10rem 0;
+    justify-content: center;   /* center all three horizontally */
+    align-items: flex-start;   /* align them from the top */
+    margin: 5rem 0;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;    /* stack logo above text */
+    align-items: center;       /* center icon and text */
+    text-align: center;
+    width: 100%;              /* control box width */
+    padding: 2rem;
+    background-color: #000814; /* optional background for each box */
+    /* border-radius: 12px; */
+    color: #fff;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature i {
+    font-size: 50px;
+    color: #fff;           
+    margin-bottom: 1rem;
 }
 
 .design {
-    background-color: #000814;
-    color: #fff;
-    width: 100%;
-    padding: 6rem;
+    font-size: 1rem;
 }
 
-.quotes {
 
+/* blockquote slider */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
 }
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+
 
 /* ====== TABLET VIEW ====== */
 @media screen and (max-width: 768px) {
