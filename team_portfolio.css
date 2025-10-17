@@ -222,13 +222,13 @@ nav a:hover {
 .member-name {
   font-size: 1.1em;
   font-weight: bold;
-  color: #3488d1;
+  color: #000814;
   margin-bottom: 5px;
 }
 
 .member-role {
   font-size: 0.97em;
-  color: #1877b2;
+  color: #000814;
   margin-bottom: 12px;
   font-weight: 500;
 }
@@ -249,7 +249,9 @@ nav a:hover {
   margin: 2px 5px;
   font-size: 0.9em;
 }
-
+.skills {
+  text-align: center;
+}
 .member-card:hover {
   transform: translateY(-5px);
 }

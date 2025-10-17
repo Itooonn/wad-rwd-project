@@ -196,7 +196,7 @@ nav a.active {
 }
 
 .card-modal {
-  width: 100%;
+  width: 80vh;
   max-width: 900px;
   border-radius: 14px;
   overflow: hidden;
