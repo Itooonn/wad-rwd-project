@@ -139,14 +139,14 @@ nav a:hover {
     background-color: #f1f1f1;
     color: #000814;
     padding: 2rem;
-    text-align: center;
+    text-align: justify;
 }
 
 .about-second-section {
     background-color: #000814;
     color: #fff;
     padding: 2rem;
-    text-align: center;
+    text-align: justify;
 }
 
 .about-third-section {
@@ -322,18 +322,14 @@ nav a:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* This removes the lightblue tap in mobile devices */
-a, button {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-}
-
 /* ==========================
    RESPONSIVE DESIGN
 ========================== */
 @media (max-width: 900px) {
   .team-container {
     grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
   }
 }
 
@@ -363,11 +359,25 @@ a, button {
         justify-content: space-evenly;
         padding: 1rem;
         margin: auto;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .about-content h1 {
         font-size: 2rem;
+    }
+    
+    .team-wrapper {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      padding: 1rem;
+    }
+    
+    .member-card {
+      width: 100%;
+      padding: 24px 18px;
+    }
+    
+    .member-photo {
+      width: 80px;
+      height: 80px;
     }
 }
