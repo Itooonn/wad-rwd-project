@@ -404,7 +404,7 @@ a, button {
 
 
 /* ====== TABLET VIEW ====== */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1020px) {
     header {
         flex-direction: column;          /* Stack logo and nav vertically */
         height: auto;                    /* Allow header height to grow */
