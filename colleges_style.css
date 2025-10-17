@@ -319,7 +319,7 @@ a, button {
   -webkit-touch-callout: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     header {
         flex-direction: column;          /* Stack logo and nav vertically */
         height: auto;                    /* Allow header height to grow */
@@ -343,7 +343,7 @@ a, button {
         right: 0;                        /* Reset the right offset */
         width: 100%;                     /* Full width for each link */
         justify-content: space-evenly;
-        padding: 1rem 0;
+        padding: 1rem;
         margin: auto;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
