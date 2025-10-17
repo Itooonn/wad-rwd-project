@@ -394,6 +394,6 @@ nav a.active {
       font-size: 0.85rem;
     }
     .card-modal {
-    width: auto;
+    width: 100%;
     }
 }
