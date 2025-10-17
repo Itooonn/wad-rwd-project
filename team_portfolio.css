@@ -358,7 +358,7 @@ a, button {
         right: 0;                        /* Reset the right offset */
         width: 100%;                     /* Full width for each link */
         justify-content: space-evenly;
-        padding: 1rem 0;
+        padding: 1rem;
         margin: auto;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -367,4 +367,13 @@ a, button {
     .about-content h1 {
         font-size: 2rem;
     }
+
+   .about-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-left: 1rem; /* Small indent for better spacing */
+      text-align: left;   /* Ensures text aligns left */
+   }
 }
