@@ -313,18 +313,13 @@ nav a.active {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* This removes the lightblue tap in mobile devices */
-a, button {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-}
 
-@media (max-width: 900px) {
+/* Responsive web */
+@media screen and (max-width: 1020px) {
     header {
         flex-direction: column;          /* Stack logo and nav vertically */
         height: auto;                    /* Allow header height to grow */
         text-align: center;
-        opacity: 100%;
     }
 
     .logo {
@@ -349,59 +344,53 @@ a, button {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-  .search-bar {
-    flex-direction: column;
-    width: 90%;
-    max-width: none;
-    margin: 15px auto;
-    border-radius: 12px;
-  }
+    .search-bar {
+      flex-direction: column;
+      width: 90%;
+      max-width: none;
+      margin: 15px auto;
+      border-radius: 12px;
+    }
 
-  .search-bar input {
-    width: 100%;
-    border-radius: 12px 12px 0 0;
-    padding: 10px;
-    font-size: 1rem;
-  }
+    .search-bar input {
+      width: 100%;
+      border-radius: 12px 12px 0 0;
+      padding: 10px;
+      font-size: 1rem;
+    }
 
-  .search-bar button {
-    width: 100%;
-    border-radius: 0 0 12px 12px;
-    margin: 0;
-    padding: 10px;
-  }
+    .search-bar button {
+      width: 100%;
+      border-radius: 0 0 12px 12px;
+      margin: 0;
+      padding: 10px;
+    }
 
-  .school-section {
-    padding: 30px 15px;
-  }
+    .school-section {
+      padding: 30px 15px;
+    }
 
-  .school-section h2 {
-    font-size: 1.3rem;
-  }
+    .school-section h2 {
+      font-size: 1.3rem;
+    }
 
-  .school-image {
-    height: 160px;
-  }
+    .school-image {
+      height: 160px;
+    }
 
-  .school-info {
-    padding: 18px;
-  }
+    .school-info {
+      padding: 18px;
+    }
 
-  .school-info h3 {
-    font-size: 1.05rem;
-  }
+    .school-info h3 {
+      font-size: 1.05rem;
+    }
 
-  .location {
-    font-size: 0.85rem;
-  }
+    .location {
+      font-size: 0.85rem;
+    }
 
-  .school-info p {
-    font-size: 0.85rem;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 15px;
-  }
+    .school-info p {
+      font-size: 0.85rem;
+    }
 }

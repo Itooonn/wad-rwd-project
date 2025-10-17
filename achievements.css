@@ -131,11 +131,11 @@ nav a:hover {
     position: relative;
 }
 .features li:before {
-    content: "🏅";
+    content: "●";
     position: absolute;
     left: 0;
     top: 0;
-    color: #f7b731;
+    color: #000814;
     font-size: 1em;
 }
 .history {
@@ -204,18 +204,11 @@ nav a:hover {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* This removes the lightblue tap in mobile devices */
-a, button {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-}
-
-@media (max-width: 900px) {
+@media screen and (max-width: 1020px) {
     header {
         flex-direction: column;          /* Stack logo and nav vertically */
         height: auto;                    /* Allow header height to grow */
         text-align: center;
-        opacity: 100%;
     }
 
     .logo {
