@@ -330,6 +330,349 @@ nav a:hover {
     gap: 20px;
     max-width: 100%;
   }
+  
+    header {
+        flex-direction: column;          /* Stack logo and nav vertically */
+        height: auto;                    /* Allow header height to grow */
+        text-align: center;
+        opacity: 100%;
+    }
+
+    .logo {
+        position: static;                /* Reset position */
+        left: 0;
+        margin-bottom: 0.5rem;
+        height: 50px;
+    }
+
+    nav {
+        width: 100%;
+        background-color: #000814;       /* Match header color */
+    }
+
+    nav a {
+        right: 0;                        /* Reset the right offset */
+        width: 100%;                     /* Full width for each link */
+        justify-content: space-evenly;
+        padding: 1rem;
+        margin: auto;
+    }
+
+    .about-content h1 {
+        font-size: 2rem;
+    }
+    
+    .team-wrapper {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      padding: 1rem;
+    }
+    
+    .member-card {
+      width: 100%;
+      padding: 24px 18px;
+    }
+    
+    .member-photo {
+      width: 80px;
+      height: 80px;
+    }
+}    z-index: 100;
+    height: 80px;
+    pointer-events: auto;
+    transition: opacity 0.3s;
+}
+
+nav {
+    display: flex;
+    height: 100%; /* Fill header height */
+    gap: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    right: 6rem;
+    display: flex;
+    align-items: center;
+    height: 100%;            /* Fill header height */
+    padding: 0 2.4rem;       /* Only horizontal padding */
+    box-sizing: border-box;
+}
+
+nav a:hover {
+    background-color: #ffffff;
+    color: #000814;          
+}
+
+/* ==========================
+   TITLES
+========================== */
+.title {
+  text-align: center;
+  margin: 30px 0 10px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #000814;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+.about-hero {
+  background: url('images/backgrounds/lvcc2.webp') center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  position: relative;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 8, 20, 0.7);
+  z-index: 0;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-content h1 {
+  font-size: 3rem;
+  margin: 4rem 0;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: #dce0e6;
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+.about-main {
+    padding: 2rem 0;
+}
+.about-main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-main p {
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.about-first-section{
+    background-color: #f1f1f1;
+    color: #000814;
+    padding: 2rem;
+    text-align: justify;
+}
+
+.about-second-section {
+    background-color: #000814;
+    color: #fff;
+    padding: 2rem;
+    text-align: justify;
+}
+
+.about-third-section {
+    background-color: #f1f1f1;
+    color: #000814;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content block */
+    text-align: justify; /* Justifies the text itself */
+}
+
+.about-list {
+    list-style: none;
+}
+
+.about-list li {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.about-list i {
+  color: #002152;
+  margin-right: 10px;
+}
+
+/* ==========================
+   TEAM SECTION
+========================== */
+.team_title h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000814;
+  padding: 2rem 0;
+  margin: 0%;
+}
+
+.team-container {
+  background-color: #000814; /* full-width background */
+  width: 100%;
+  padding-bottom: 4rem;
+}
+
+.team-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;   /* controls card width area */
+  margin: auto;     /* centers the grid */
+}
+
+.member-card {
+  background: #fff;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 15px;
+  padding: 32px 22px 26px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.member-photo {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #eee;
+  margin-bottom: 15px;
+}
+
+.member-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #3488d1;
+  margin-bottom: 5px;
+}
+
+.member-role {
+  font-size: 0.97em;
+  color: #1877b2;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.member-bio {
+  font-size: 0.98em;
+  color: #444;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.skills {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.skills span {
+  display: inline-block;
+  background: #eaf4fb;
+  color: #1082cd;
+  border-radius: 13px;
+  padding: 4px 12px;
+  margin: 2px 5px;
+  font-size: 0.9em;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.footer-top {
+    background-color: #000814;
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem; /* Space above footer */
+}
+.first-row p,
+.first-row a {
+    color: #fff;
+}
+.footer-top {
+    padding-top: 115px;
+    padding-bottom: 100px;
+}
+.footer_logo img {
+    height: 100px;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-top p {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.footer-top a {
+    text-decoration: none;
+}
+
+.social-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #003380;
+}
+
+.footer-bottom {
+    background-color: #000814;
+    color: white;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+@media (max-width: 900px) {
+  .team-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
