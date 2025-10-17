@@ -404,7 +404,7 @@ a, button {
 
 
 /* ====== TABLET VIEW ====== */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     header {
         flex-direction: column;          /* Stack logo and nav vertically */
         height: auto;                    /* Allow header height to grow */
@@ -465,29 +465,3 @@ a, button {
         font-size: 1rem;
     }
 }
-
-/* ====== MOBILE VIEW (480px and below) ====== */
-/* @media screen and (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.8rem;            
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero-btn {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.5rem;
-    }
-
-    main {
-        height: auto;
-        padding: 2rem;
-    }
-
-    main h1 {
-        padding: 0%;
-    }
-} */
-/* THIS DOESNT WORK */
