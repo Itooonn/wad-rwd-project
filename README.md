@@ -16,12 +16,14 @@ We are all the Debugger, Developer, Designer.
 ---
 
 ## Features:
-- Mobile-friendly  
-- Offers compilation of ready links and tools  
-- Introduces a community for web dev learners  
+- School recommendations
+- Comprehensive Comparisons  
+- Accurate and Updated Information
+- Student-Centered Design
+- Affordable and Specialized Search Options
 
 ---
 
 ## Instruction to Run:
-🔹 [View Website](#)  
-🔹 [View Canva Design](#)
+🔹 [Click here to view our Website](#)  
+
