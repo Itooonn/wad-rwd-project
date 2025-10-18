@@ -413,15 +413,16 @@ blockquote p {
 
     nav {
         width: 100%;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
         background-color: #000814;       /* Match header color */
     }
 
     nav a {
         right: 0;                        /* Reset the right offset */
         justify-content: space-evenly;
+        width: 100%;
         padding: 1rem;
         margin: auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
