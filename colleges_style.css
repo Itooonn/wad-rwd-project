@@ -336,7 +336,6 @@ nav a.active {
 
     nav a {
         right: 0;                        /* Reset the right offset */
-        width: 100%;                     /* Full width for each link */
         justify-content: space-evenly;
         padding: 1rem;
         margin: auto;
