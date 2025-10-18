@@ -24,6 +24,6 @@ We are all the Debugger, Developer, Designer.
 
 ---
 
-## Instruction to Run:
-🔹 [Click here to view our Website](#)  
+## Demo
+🔹 [Click here to view our Website](https://itooonn.github.io/wad-rwd-project/)  
 
