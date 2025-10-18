@@ -1,50 +1,17 @@
 # VisitColleges
 
-**VisitColleges** is a website of compilation of essential tools and resources for web development students — especially beginners who need guidance. It also offers a supportive community for students and developers, including our very own team.
+**VisitColleges** is a student-focused platform designed to make the college decision process simple, informative, and personalized. We understand that choosing the right university is one of the most important steps in your journey — and we’re here to help you make that choice with confidence.
 
 ---
 
 ## Members & Contribution:
 
-**Adrian, Angelene**  
-**Bautista, Russell Jann**  
-**Bac, Alexandrea Q.**  
-**Carbonel, Just Marielle**
+**Mahusay, Karl Ashton**  
+**Rodriguez, Leorenz Bien G.**  
+**Gabaleo, Rimer**  
+**Jarina, Jimuel**
 
----
-
-### Design
-**Bac, Alexandrea Q.**
-
----
-
-### Researchers
-**Carbonel, Just Marielle**  
-**Adrian, Angelene**
-
----
-
-### HTML
-**Bautista, Russell Jann**  
-**Bac, Alexandrea Q.**  
-**Carbonel, Just Marielle**
-
----
-
-### CSS
-**Bautista, Russell Jann**  
-**Bac, Alexandrea Q.**
-
----
-
-### JavaScript & Interactivity
-**Bautista, Russell Jann**  
-**Bac, Alexandrea Q.**
-
----
-
-### Project Version Manager
-**Carbonel, Just Marielle**
+We are all the Debugger, Developer, Designer.
 
 ---
 
